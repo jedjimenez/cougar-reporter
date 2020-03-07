@@ -15,7 +15,7 @@ namespace cougar_reporter
 
             DependencyService.Register<MockDataStore>();
             //MainPage = new AppShell();
-            MainPage = new LoginPage();
+            MainPage = new ListViewItem();
         }
 
         protected override void OnStart()
