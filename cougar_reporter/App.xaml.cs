@@ -12,10 +12,9 @@ namespace cougar_reporter
         public App()
         {
             InitializeComponent();
-
             DependencyService.Register<MockDataStore>();
-            //MainPage = new AppShell();
-            MainPage = new RegisterPage();
+            MainPage = new MainPage();
+            
         }
 
         protected override void OnStart()

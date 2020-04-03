@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:local="clr-namespace:cougar_reporter" xmlns:local1="clr-namespace:cougar_reporter.Views"
+            mc:Ignorable="d"
+             x:Class="cougar_reporter.Views.MainPage">
+    <TabbedPage.Children>
+        <NavigationPage Title="Login" Icon="home.png">
+            <x:Arguments>
+                <local:LoginPage />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="Create Account" Icon="music.png">
+            <x:Arguments>
+                <local1:RegisterPage />
+            </x:Arguments>
+        </NavigationPage>
+        
+    </TabbedPage.Children>
+</TabbedPage>
