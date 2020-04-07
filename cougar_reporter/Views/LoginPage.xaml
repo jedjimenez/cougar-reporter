@@ -2,12 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
              x:Class="cougar_reporter.LoginPage"  
-             BackgroundImage="logo.jpg">
+             BackgroundImage="logo.jpg"
+             Title="Login">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Padding="30" Spacing="40">
             <BoxView HeightRequest="10"/>
-            <Image HorizontalOptions="Center" WidthRequest="300" Source="maco.jpg"/>
-            <Frame BackgroundColor="#BF043055" HasShadow="False">
+            <Image HorizontalOptions="Center" WidthRequest="300" Source="csusm.jpg"/>
+            <Frame BackgroundColor="#1592E6" HasShadow="False">
                 <StackLayout Orientation="Vertical" Spacing="10">
                     <Entry x:Name="Email" Text="{Binding Email}" Placeholder="Username"   
                            PlaceholderColor="White" HeightRequest="40"   
@@ -19,9 +20,9 @@
                            TextColor="White"/>
                 </StackLayout>
             </Frame>
-            <Button Command="{Binding SubmitCommand}" Text="Login" TextColor="White"  
-                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
-                    BackgroundColor="#088da5" />
+            <Button Command="{Binding SubmitCommand}" Text="Login" TextColor="#1592E6"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="CenterAndExpand" 
+                    CornerRadius="360" WidthRequest="150" Clicked="Button_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>  

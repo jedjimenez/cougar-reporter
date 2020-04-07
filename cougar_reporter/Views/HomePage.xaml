@@ -7,9 +7,22 @@
              x:Class="cougar_reporter.Views.HomePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Welcome to Cougar Reporter!" FontAttributes="Bold" FontSize="16" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="#1592E6"/>
+                <ImageButton Source="cougar.jpg" Grid.Row="1" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Label Text="Tap the Cougar to Enter ..." TextColor="#1592E6" FontAttributes="Bold" FontSize="16" Grid.Row="2" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

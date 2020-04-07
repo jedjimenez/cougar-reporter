@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cougar_reporter;
+using System;
 using System.ComponentModel;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -39,6 +40,7 @@ namespace XF_Login.ViewModels
             {
                 DisplayInvalidLoginPrompt();
             }
+
         }
     }
 }

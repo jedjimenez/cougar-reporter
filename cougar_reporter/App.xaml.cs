@@ -13,7 +13,13 @@ namespace cougar_reporter
         {
             InitializeComponent();
             DependencyService.Register<MockDataStore>();
-            MainPage = new MainPage();
+            //MainPage = new MainPage();
+
+            var tabbedPage = new TabbedPage();
+            tabbedPage.Children.Add(new LoginPage()); 
+            tabbedPage.Children.Add(new RegisterPage()); 
+            MainPage = new NavigationPage(); 
+            MainPage = tabbedPage; 
             
         }
 

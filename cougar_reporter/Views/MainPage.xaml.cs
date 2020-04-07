@@ -11,7 +11,7 @@ using cougar_reporter.Views;
 namespace cougar_reporter.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPage : TabbedPage
+    public partial class MainPage : ContentPage
     {
         public MainPage()
         {

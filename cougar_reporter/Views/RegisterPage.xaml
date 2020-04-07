@@ -4,26 +4,26 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="cougar_reporter.Views.RegisterPage">
+             x:Class="cougar_reporter.Views.RegisterPage"
+             Title="Create Account">
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
             <StackLayout Orientation="Horizontal">
-                <Entry Placeholder="First Name"></Entry>
-                <Entry Placeholder="Last Name"></Entry>
+                <Entry Placeholder="First Name" PlaceholderColor="#1592E6"></Entry>
+                <Entry Placeholder="Last Name" PlaceholderColor="#1592E6"></Entry>
             </StackLayout>
-            <Entry Placeholder="Email" Keyboard="Email"></Entry>
-            <Entry Placeholder="Password" IsPassword="True"></Entry>
-            <Entry Placeholder="Confirm Password" IsPassword="True"></Entry>
-            <Label Text="Date Of Birth"></Label>
-            <DatePicker Date="30 Mar 2017" Format="dd MMM yyyy" MinimumDate="1 Jan 1900" MaximumDate="01 Jan 2017"></DatePicker>
-            <Label Text="Address"></Label>
+            <Entry Placeholder="Email" Keyboard="Email" PlaceholderColor="#1592E6"></Entry>
+            <Entry Placeholder="Password" IsPassword="True" PlaceholderColor="#1592E6"></Entry>
+            <Entry Placeholder="Confirm Password" IsPassword="True" PlaceholderColor="#1592E6"></Entry>
+            <Label Text="CSUSM ID Number" TextColor="#1592E6"></Label>
             <Editor></Editor>
             <StackLayout Orientation="Horizontal">
-                <Label Text="Save Password"></Label>
-                <Switch IsToggled="False"></Switch>
+                <Label Text="Are you..." TextColor="#1592E6" />
+                <Button Text="Student" TextColor="#1592E6"/>
+                <Button Text="Upkeep" TextColor="#1592E6"/>
+                <Button Text="Faculty" TextColor="#1592E6"/>
             </StackLayout>
-            <Button Text="Sign Up"></Button>
-            <Label Text="Already have account? Sign In" TextColor="Blue"></Label>
+            <Button Text="Sign Up" TextColor="#1592E6"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
