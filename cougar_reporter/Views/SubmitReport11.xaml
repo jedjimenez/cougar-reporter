@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="cougar_reporter.Views.SubmitReport11"
+             Title="Fill Form">
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White" Margin="10, 30, 15, 30" Padding="30">
+            <Label Text="Submit Report" 
+                   FontSize="30"
+                   TextColor="Blue">
+            </Label>
+            <Picker x:Name="RepairPicker" 
+                    Title ="Repair Type" 
+                    TitleColor="Blue" 
+                    SelectedIndexChanged="RepairPicker_SelectedIndexChanged">
+            </Picker>
+            <Picker x:Name="BuildingPicker" 
+                    Title ="Building" 
+                    TitleColor="Blue" 
+                    SelectedIndexChanged="BuildingPicker_SelectedIndexChanged">
+            </Picker>
+            <Entry x:Name="RoomNumber" 
+                   Placeholder="Room Number"
+                   Keyboard="Numeric"
+                   TextChanged="OnEntryTextChanged"
+                   Completed="OnEntryCompleted">
+            </Entry>
+            <Editor x:Name ="UserText" 
+                    Placeholder="Add more details here (500 character limit)"
+                    MaxLength="500"
+                    AutoSize="TextChanges"
+                    TextChanged="OnEditorTextChanged"
+                    Completed="OnEditorCompleted">
+            </Editor>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>
