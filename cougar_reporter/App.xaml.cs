@@ -13,19 +13,8 @@ namespace cougar_reporter
         {
             InitializeComponent();
             DependencyService.Register<MockDataStore>();
-<<<<<<< Updated upstream
-            //MainPage = new MainPage();
-
-            var tabbedPage = new TabbedPage();
-            tabbedPage.Children.Add(new LoginPage()); 
-            tabbedPage.Children.Add(new RegisterPage()); 
-            MainPage = new NavigationPage(); 
-            MainPage = tabbedPage; 
-            
-=======
             //MainPage = new AppShell();
-            MainPage = new SubmitReport00();
->>>>>>> Stashed changes
+            MainPage = new NavigationPage(new SubmitReport11());
         }
 
         protected override void OnStart()

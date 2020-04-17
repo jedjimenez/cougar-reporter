@@ -4,39 +4,70 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="cougar_reporter.Views.SubmitReport2"
-             Title="Add Photo">
-    
+             x:Class="cougar_reporter.Views.SubmitReport2">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Image Source="list.png" 
+                   HorizontalOptions="Start"
+                   VerticalOptions="CenterAndExpand"/>
+
+            <Label Text="Submit Ticket"
+                   TextColor="White"
+                   FontSize="Large"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
     <ContentPage.Content>
-        <StackLayout BackgroundColor="White" Margin="10, 30, 15, 30" Padding="50">
+        <StackLayout BackgroundColor="White" Padding="50">
 
-            <Label Text="Submit a photo to better help the maintenance team" TextColor="Blue" FontSize="30" />
+            <Label Text="Submit a photo to better help the maintenance team" 
+                   TextColor="Blue" 
+                   FontSize="25" 
+                   HorizontalTextAlignment="Center"
+                   Margin="5, 5, 5, 5"/>
 
-            <Label Text="Tap Folder to open your gallery" TextColor="CadetBlue" FontSize="20"/>
+            <Label Text="Tap Folder to open your gallery" 
+                   TextColor="Blue" 
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   Margin="5, 10, 5, 5"/>
 
-            <ImageButton Source="folder.png"
-                         WidthRequest="40"
-                         HeightRequest="40"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                         Clicked="Folder_Clicked"/>
+            <ImageButton Source="folder2.png"
+                         WidthRequest="100"
+                         HeightRequest="100"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         Clicked="Folder_Clicked"
+                         Margin="5, 10, 5, 5"/>
 
-            <Label Text="Tap the camera to take a photo" TextColor="CadetBlue" FontSize="20"/>
+            <Label Text="Tap the camera to take a photo" 
+                   TextColor="Blue" 
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   Margin="5, 5, 5, 5"/>
 
-            <ImageButton Source="camera.png"
+            <ImageButton Source="camera2.png"
                          x:Name="ImageButton"
-                         WidthRequest="40"
-                         HeightRequest="40"
+                         WidthRequest="100"
+                         HeightRequest="100"
                          HorizontalOptions="Center" 
                          VerticalOptions="Center"
-                         Clicked="Camera_Clicked"/>
+                         Clicked="Camera_Clicked"
+                         Margin="5, 10, 5, 5"/>
 
             <Image x:Name="MainImage"/>
 
             <Label x:Name="PathLabel"
-                   Text="PathLabel"
                    FontSize="14"
                    TextColor="Black"/>
+
+            <Button Text="Continue"
+                    Clicked="Button_Clicked"
+                    Margin="5, 10, 5, 5"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

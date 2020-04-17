@@ -4,21 +4,54 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="cougar_reporter.Views.SubmitReport3"
-             Title="Submit">
+             x:Class="cougar_reporter.Views.SubmitReport3">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Image Source="list.png" 
+                   HorizontalOptions="Start"
+                   VerticalOptions="CenterAndExpand"/>
+
+            <Label Text="Submit Ticket"
+                   TextColor="White"
+                   FontSize="Large"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
 
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
 
-            <Label x:Name="RepairText"/>
+            <Entry x:Name="RepairText"
+                   TextColor="Blue" 
+                   FontSize="25" 
+                   HorizontalTextAlignment="Center"
+                   Margin="5, 5, 5, 5"
+                   IsReadOnly="True"/>
 
-            <Label x:Name="BuildingText"/>
+            <Entry x:Name="BuildingText"
+                   TextColor="Blue" 
+                   FontSize="25" 
+                   HorizontalTextAlignment="Center"
+                   Margin="5, 5, 5, 5"
+                   IsReadOnly="True"/>
 
-            <Label x:Name="RoomText"/>
+            <Entry x:Name="RoomText"
+                   TextColor="Blue" 
+                   FontSize="25" 
+                   HorizontalTextAlignment="Center"
+                   Margin="5, 5, 5, 5"
+                   IsReadOnly="True"/>
 
-            <Label x:Name="Description"/>
+            <Editor x:Name="Description"
+                   AutoSize="TextChanges"
+                   TextColor="Blue" 
+                   FontSize="Medium" 
+                   Margin="5, 5, 5, 5"
+                   IsReadOnly="True"/>
 
-            <Image x:Name="Photo"/>
+            <Image x:Name="Photo" Source="cougar.jpg"/>
 
             <Button x:Name="SubmitButton"
                     Text="Submit"

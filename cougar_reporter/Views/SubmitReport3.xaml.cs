@@ -16,30 +16,19 @@ namespace cougar_reporter.Views
         public SubmitReport3()
         {
             InitializeComponent();
-            RepairText.Text = "default repair";
-            BuildingText.Text = "default building";
-            RoomText.Text = "default room";
         }
-        public SubmitReport3(string s, string value)
+        public SubmitReport3(string _repair, string _building, string _room, string _des)
         {
             InitializeComponent();
-            if (s == "RepairText")
-            {
-                RepairText.Text = value;
-            }
-            else if (s == "BuildingText")
-            {
-                BuildingText.Text = value;
-            }
-            else//RoomText
-            {
-                RoomText.Text = value;
-            }
+            RepairText.Text = _repair;
+            BuildingText.Text = _building;
+            RoomText.Text = _room;
+            Description.Text = _des;
         }
 
-        private void SubmitButton_Clicked(object sender, EventArgs e)
+        private async void SubmitButton_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new ContentPage());
         }
     }
 }

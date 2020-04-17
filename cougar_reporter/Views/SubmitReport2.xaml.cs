@@ -15,9 +15,21 @@ namespace cougar_reporter.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SubmitReport2 : ContentPage
     {
+        public string Rpick2;
+        public string Bpick2;
+        public string Entry2;
+        public string Editor2;
         public SubmitReport2()
         {
             InitializeComponent();
+        }
+        public SubmitReport2(string repair_, string building_, string room_, string des_)
+        {
+            InitializeComponent();
+            Rpick2 = repair_;
+            Bpick2 = building_;
+            Entry2 = room_;
+            Editor2 = des_;
         }
 
         private async void Folder_Clicked(object sender, EventArgs e)
@@ -79,6 +91,11 @@ namespace cougar_reporter.Views
                     return stream;
                 });
             }
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SubmitReport3(Rpick2, Bpick2, Entry2, Editor2));
         }
     }
 }
