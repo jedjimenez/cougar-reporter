@@ -22,9 +22,11 @@ namespace cougar_reporter
 
        async private void Button_Clicked(object sender, EventArgs e)
         {
-
+            //create database folder
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDatabase.db");
+            //create database
             var db = new SQLiteConnection(dbpath);
+            //set up query to insert into database
             var myquery = db.Table<RegUserTable>().Where(u => u.Email.Equals(username.Text) && u.Password.Equals(password.Text)).FirstOrDefault();
 
             if (myquery != null)
@@ -35,6 +37,7 @@ namespace cougar_reporter
             {
                 Device.BeginInvokeOnMainThread(async () =>
                 {
+                    //initialize all possible cases
                     var result = await this.DisplayAlert("Error!", "Wrong username or password. Enter again.", "Yes", "Cancel");
 
                     if (result)
