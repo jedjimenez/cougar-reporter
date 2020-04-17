@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using XF_Login.ViewModels;
+//using XF_Login.ViewModels;
 using SQLite;
 using cougar_reporter.Models;
 
@@ -48,5 +48,6 @@ namespace cougar_reporter
 
             //await  Navigation.PushModalAsync(new HomePage());
         }
+
     }
 }

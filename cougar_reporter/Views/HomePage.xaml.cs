@@ -16,5 +16,7 @@ namespace cougar_reporter.Views
         {
             InitializeComponent();
         }
+
+
     }
 }

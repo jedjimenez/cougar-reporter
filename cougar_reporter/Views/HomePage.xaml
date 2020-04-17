@@ -22,6 +22,7 @@
                 <Label Text="Welcome to Cougar Reporter!" FontAttributes="Bold" FontSize="16" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="#1592E6"/>
                 <ImageButton Source="cougar.jpg" Grid.Row="1" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                 <Label Text="Tap the Cougar to Enter ..." TextColor="#1592E6" FontAttributes="Bold" FontSize="16" Grid.Row="2" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                
             </Grid>
         </StackLayout>
     </ContentPage.Content>
