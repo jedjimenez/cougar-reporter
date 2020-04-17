@@ -12,8 +12,6 @@ namespace cougar_reporter
         public App()
         {
             InitializeComponent();
-            //DependencyService.Register<MockDataStore>();
-            //MainPage = new MainPage();
 
             var tabbedPage = new TabbedPage();
             tabbedPage.Children.Add(new LoginPage()); 
@@ -21,9 +19,9 @@ namespace cougar_reporter
             MainPage = new NavigationPage(); 
             MainPage = tabbedPage; 
             
-            DependencyService.Register<MockDataStore>();
+  
             //MainPage = new AppShell();
-            MainPage = new NavigationPage(new SubmitReport11());
+            //MainPage = new NavigationPage(new SubmitReport11());
 
         }
 
