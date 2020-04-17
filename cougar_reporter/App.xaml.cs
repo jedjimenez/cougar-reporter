@@ -12,9 +12,19 @@ namespace cougar_reporter
         public App()
         {
             InitializeComponent();
+            //DependencyService.Register<MockDataStore>();
+            //MainPage = new MainPage();
+
+            var tabbedPage = new TabbedPage();
+            tabbedPage.Children.Add(new LoginPage()); 
+            tabbedPage.Children.Add(new RegisterPage()); 
+            MainPage = new NavigationPage(); 
+            MainPage = tabbedPage; 
+            
             DependencyService.Register<MockDataStore>();
             //MainPage = new AppShell();
             MainPage = new NavigationPage(new SubmitReport11());
+
         }
 
         protected override void OnStart()
