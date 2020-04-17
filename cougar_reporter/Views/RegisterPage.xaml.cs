@@ -22,10 +22,14 @@ namespace cougar_reporter.Views
 
         public void Button_Clicked(object sender, EventArgs e)
         {
+            //get data path
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDatabase.db");
+            //create database with SQL
             var db = new SQLiteConnection(dbpath);
+            //create database with table
             db.CreateTable<RegUserTable>();
-
+            
+            //create table with Email and password
             var item = new RegUserTable()
             {
               
@@ -35,9 +39,12 @@ namespace cougar_reporter.Views
 
 
             };
+            
+            //insert into database
             db.Insert(item);
             Device.BeginInvokeOnMainThread(async () =>
             {
+                //all possible cases
                 var result = await this.DisplayAlert("Congratulations!", "User registration successfull", "Yes", "Cancel");
 
                 if (result)
