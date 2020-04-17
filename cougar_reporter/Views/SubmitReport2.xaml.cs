@@ -26,6 +26,7 @@ namespace cougar_reporter.Views
         public SubmitReport2(string repair_, string building_, string room_, string des_)
         {
             InitializeComponent();
+            //receive value from SubmitReport1
             Rpick2 = repair_;
             Bpick2 = building_;
             Entry2 = room_;
@@ -38,6 +39,7 @@ namespace cougar_reporter.Views
             
             if(!CrossMedia.Current.IsPickPhotoSupported)
             {
+                //all possbile case errors
                 await DisplayAlert("Oops", "Pick Photo is not supported !", "OK");
                 return;
             }
@@ -48,7 +50,7 @@ namespace cougar_reporter.Views
             {
                 return;
             }
-
+            //Photo path
             PathLabel.Text = "Photo Path" + file.Path;
 
             MainImage.Source = ImageSource.FromStream(() =>
@@ -58,10 +60,13 @@ namespace cougar_reporter.Views
                 return stream;
             });
         }
+        
+        //camera click function
         private async void Camera_Clicked(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();
-
+            
+            //check for errors open camera
             if(!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
             {
                 await DisplayAlert("No camera", ":( No camera available.", "OK");
@@ -70,6 +75,7 @@ namespace cougar_reporter.Views
             else
             {
                 var file = await CrossMedia.Current.TakePhotoAsync(
+                //Save into local file
                 new StoreCameraMediaOptions
                 {
                 SaveToAlbum = true,
