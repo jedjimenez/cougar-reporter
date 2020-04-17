@@ -12,7 +12,7 @@ namespace cougar_reporter
         public App()
         {
             InitializeComponent();
-            DependencyService.Register<MockDataStore>();
+            //DependencyService.Register<MockDataStore>();
             //MainPage = new MainPage();
 
             var tabbedPage = new TabbedPage();

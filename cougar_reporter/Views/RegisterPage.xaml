@@ -9,13 +9,13 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
             <StackLayout Orientation="Horizontal">
-                <Entry Placeholder="First Name" PlaceholderColor="#1592E6"></Entry>
-                <Entry Placeholder="Last Name" PlaceholderColor="#1592E6"></Entry>
+                <Entry x:Name="fName" Placeholder="First Name" PlaceholderColor="#1592E6"></Entry>
+                <Entry x:Name="lName"  Placeholder="Last Name" PlaceholderColor="#1592E6"></Entry>
             </StackLayout>
-            <Entry Placeholder="Email" Keyboard="Email" PlaceholderColor="#1592E6"></Entry>
-            <Entry Placeholder="Password" IsPassword="True" PlaceholderColor="#1592E6"></Entry>
-            <Entry Placeholder="Confirm Password" IsPassword="True" PlaceholderColor="#1592E6"></Entry>
-            <Label Text="CSUSM ID Number" TextColor="#1592E6"></Label>
+            <Entry x:Name="email" Placeholder="Email" Keyboard="Email" PlaceholderColor="#1592E6"></Entry>
+            <Entry x:Name="pswd" Placeholder="Password" IsPassword="True" PlaceholderColor="#1592E6"></Entry>
+            <Entry x:Name="confpswd" Placeholder="Confirm Password" IsPassword="True" PlaceholderColor="#1592E6"></Entry>
+            <Label x:Name="id" Text="CSUSM ID Number" TextColor="#1592E6"></Label>
             <Editor></Editor>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Are you..." TextColor="#1592E6" />
@@ -23,7 +23,7 @@
                 <Button Text="Upkeep" TextColor="#1592E6"/>
                 <Button Text="Faculty" TextColor="#1592E6"/>
             </StackLayout>
-            <Button Text="Sign Up" TextColor="#1592E6"/>
+            <Button Text="Sign Up" TextColor="#1592E6" Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

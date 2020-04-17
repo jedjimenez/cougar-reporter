@@ -10,17 +10,17 @@
             <Image HorizontalOptions="Center" WidthRequest="300" Source="csusm.jpg"/>
             <Frame BackgroundColor="#1592E6" HasShadow="False">
                 <StackLayout Orientation="Vertical" Spacing="10">
-                    <Entry x:Name="Email" Text="{Binding Email}" Placeholder="Username"   
+                    <Entry x:Name="username" Text="{Binding Email}" Placeholder="Username"   
                            PlaceholderColor="White" HeightRequest="40"   
                            Keyboard="Email"  
                            TextColor="White"/>
-                    <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Password"   
+                    <Entry x:Name="password" Text="{Binding Password}" Placeholder="Password"   
                            PlaceholderColor="White" HeightRequest="40"   
                            IsPassword="True"  
                            TextColor="White"/>
                 </StackLayout>
             </Frame>
-            <Button Command="{Binding SubmitCommand}" Text="Login" TextColor="#1592E6"  
+            <Button Text="Login" TextColor="#1592E6"  
                     FontAttributes="Bold" FontSize="Large" HorizontalOptions="CenterAndExpand" 
                     CornerRadius="360" WidthRequest="150" Clicked="Button_Clicked" />
         </StackLayout>
