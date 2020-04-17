@@ -21,6 +21,10 @@ namespace cougar_reporter
             MainPage = new NavigationPage(); 
             MainPage = tabbedPage; 
             
+            DependencyService.Register<MockDataStore>();
+            //MainPage = new AppShell();
+            MainPage = new NavigationPage(new SubmitReport11());
+
         }
 
         protected override void OnStart()

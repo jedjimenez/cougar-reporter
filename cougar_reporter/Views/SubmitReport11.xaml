@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="cougar_reporter.Views.SubmitReport11">
+
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Image Source="list.png" 
+                   HorizontalOptions="Start"
+                   VerticalOptions="CenterAndExpand"/>
+
+            <Label Text="Submit Ticket"
+                   TextColor="White"
+                   FontSize="Large"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White" Padding="50" Orientation="Vertical">
+
+            <Picker x:Name="RepairPicker" 
+                    Title ="Repair Type" 
+                    TitleColor="Blue" 
+                    SelectedIndexChanged="RepairPicker_SelectedIndexChanged"
+                    HorizontalOptions="CenterAndExpand"
+                    FontSize="Large"
+                    Margin="5, 5, 5, 5">
+            </Picker>
+            <Picker x:Name="BuildingPicker" 
+                    Title ="Building Type" 
+                    TitleColor="Blue" 
+                    SelectedIndexChanged="BuildingPicker_SelectedIndexChanged"
+                    HorizontalOptions="CenterAndExpand"
+                    FontSize="Large"
+                    Margin="5, 5, 5, 5">
+            </Picker>
+            <Entry x:Name="RoomNumber" 
+                   Placeholder="Room Number"
+                   Keyboard="Numeric"
+                   TextChanged="OnEntryTextChanged"
+                   Completed="OnEntryCompleted"
+                   HorizontalOptions="Center"
+                   FontSize="Large"
+                   Margin="5, 5, 5, 5">
+            </Entry>
+            <Editor x:Name ="UserText" 
+                    Placeholder="Add more details here (500 character limit)"
+                    MaxLength="500"
+                    AutoSize="TextChanges"
+                    TextChanged="OnEditorTextChanged"
+                    Completed="OnEditorCompleted"
+                    HorizontalOptions="Center"
+                    FontSize="Large"
+                    Margin="5, 5, 5, 5">
+            </Editor>
+
+            <Button Text="Add Photo"
+                    TextColor="Black"
+                    FontSize="Large"
+                    Clicked="Button_Clicked"
+                    WidthRequest="75"
+                    HeightRequest="50"
+                    Margin="5, 5, 5, 5"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>
