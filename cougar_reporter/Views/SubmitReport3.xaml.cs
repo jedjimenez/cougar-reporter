@@ -17,6 +17,7 @@ namespace cougar_reporter.Views
         {
             InitializeComponent();
         }
+        //Compile other data and send to to content page
         public SubmitReport3(string _repair, string _building, string _room, string _des)
         {
             InitializeComponent();
@@ -25,7 +26,8 @@ namespace cougar_reporter.Views
             RoomText.Text = _room;
             Description.Text = _des;
         }
-
+        
+        //Open content page
         private async void SubmitButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ContentPage());
