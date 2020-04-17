@@ -13,6 +13,7 @@ namespace cougar_reporter.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SubmitReport11 : ContentPage
     {
+        //initialize value like type, building, room
         public string Rpick = "<Repair Type>";
         public string Bpick = "<Building>";
         public string Entry1 = "<Room>";
@@ -21,6 +22,8 @@ namespace cougar_reporter.Views
         public SubmitReport11()
         {
             InitializeComponent();
+            
+            //add possible choices to pick
             RepairPicker.Items.Add("Type 1");
             RepairPicker.Items.Add("Type 2");
             RepairPicker.Items.Add("Type 3");
@@ -33,12 +36,14 @@ namespace cougar_reporter.Views
 
         private void RepairPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //save user pick into variable
             string name = RepairPicker.Items[RepairPicker.SelectedIndex];
             // App.Current.MainPage.DisplayAlert(name, "Selected", "OK");
             this.Rpick = name;
         }
         private void BuildingPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //save user pick into variable
             var name = BuildingPicker.Items[BuildingPicker.SelectedIndex];
             //App.Current.MainPage.DisplayAlert(name, "Selected", "OK");
             this.Bpick = name;
@@ -46,12 +51,14 @@ namespace cougar_reporter.Views
 
         void OnEntryTextChanged(object sender, TextChangedEventArgs e)
         {
+            //change old text into new text
             string oldText = e.OldTextValue;
             string newText = e.NewTextValue;
         }
 
         void OnEntryCompleted(object sender, EventArgs e)
         {
+            //all entries has been picked
             string text = ((Entry)sender).Text;
             this.Entry1 = text;
         }
@@ -70,6 +77,7 @@ namespace cougar_reporter.Views
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
+            //call SubmitReport2 page and pass parameters into it
             await Navigation.PushAsync(new SubmitReport2(Rpick, Bpick, Entry1, Editor1));
         }
     }
