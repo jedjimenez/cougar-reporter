@@ -34,8 +34,8 @@
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Button Text ="previous" TextColor ="#1592E6" BackgroundColor="White" Font="Poppins" Margin="50" x:Name="Button1" Width="100" Content="Button1"></Button>
-                <Button Text ="next" TextColor ="#1592E6" BackgroundColor ="white" Font="Poppins" Margin="50" x:Name="Button1" Width="100" Content="Button1"></Button>
+                <Button Text ="previous" TextColor ="#1592E6" BackgroundColor="White" Font="Poppins" Margin="50" x:Name="Button1" Width="100"></Button>
+                <Button Text ="next" TextColor ="#1592E6" BackgroundColor ="white" Font="Poppins" Margin="50" x:Name="Button1" Width="100"></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

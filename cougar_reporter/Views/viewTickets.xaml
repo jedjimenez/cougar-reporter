@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="cougar_reporter.Views.viewTickets">
+    <ContentPage Title="View">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Entry Text="Building" 
+                   VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                   Grid.Row="0" Grid.Column="0" FontSize="Large"/>
+            <Entry Text="Room" 
+                   VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                   Grid.Row="0" Grid.Column="1" FontSize="Large"/>
+            <DatePicker MinimumDate="01/01/2020" MaximumDate="12/31/2020" 
+                        Date="04/17/2020" 
+                        VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                        Grid.Row="0" Grid.Column="2" 
+                        FontSize="Large" />
+
+
+            <Image Source=" "  
+                   BackgroundColor="Black" 
+                   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                   Grid.Row="3" Grid.Column="0" 
+                   Grid.ColumnSpan="2"/>
+
+            <Label Text="Priority Level" 
+                   VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                   Grid.Row="4" Grid.Column="0" 
+                   FontSize="Large"/>
+            <Entry Text="Number" 
+                   VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                   Grid.Row="4" Grid.Column="2" 
+                   FontSize="Large"/>
+            <Label Text="Repair" 
+                   VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                   Grid.Row="5" Grid.Column="0" 
+                   FontSize="Large"/>
+            <Entry Text="Repair Type" 
+                   VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                   Grid.Row="5" Grid.Column="2"
+                   FontSize="Large"/>
+            <Label Text="Status" 
+                   VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                   Grid.Row="6" Grid.Column="0" 
+                   FontSize="Large"/>
+            <Entry Text="Status" 
+                   VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                   Grid.Row="6" Grid.Column="2" 
+                   FontSize="Large"/>
+        </Grid>
+    </ContentPage>
+
+
+
+
+    <ContentPage Title="Edit">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Entry Text="Repair Type" 
+                   FontSize="Large" TextColor="Blue" 
+                   VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                   Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1"/>
+            <Entry Text="Building" 
+                   FontSize="Large" TextColor="Blue" 
+                   VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                   Grid.Row="2" Grid.Column="1"/>
+            <Entry Text="Room" 
+                   FontSize="Large" TextColor="Blue" 
+                   VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                   Grid.Row="3" Grid.Column="1" />
+            <Editor Text=" " 
+                    FontSize="Large" TextColor="Blue" 
+                    VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                    Placeholder="Add more details here (500 character limit)" 
+                    Grid.Row="4" Grid.Column="1" />
+        </Grid>
+    </ContentPage>
+
+    <ContentPage Title="Add Photo">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Do you want to take a photo and add it to the report?" 
+                   FontSize="Large" TextColor="Blue" 
+                   VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                   Grid.Row="0" Grid.Column="1"/>
+
+            <Button Text="YES" 
+                    Grid.Row="1" Grid.Column="1" Grid.RowSpan="1"
+                    TextColor="White" FontSize="Large" BackgroundColor="SteelBlue"/>
+            <Button Text="NO" 
+                    Grid.Row="2" Grid.Column="1" Grid.RowSpan="1"
+                    TextColor="White" FontSize="Large" BackgroundColor="SteelBlue"/>
+        </Grid>
+    </ContentPage>
+
+    <ContentPage Title="Delete">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Are you sure you want to delete the ticket?" 
+                   FontSize="Large" TextColor="Blue" 
+                   VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                   Grid.Row="0" Grid.Column="1"/>
+
+            <Button Text="YES, DELETE" 
+                    Grid.Row="1" Grid.Column="1" Grid.RowSpan="1"
+                    TextColor="White" FontSize="Large" BackgroundColor="SteelBlue"/>
+            <Button Text="NO, GO BACK" 
+                    Grid.Row="2" Grid.Column="1" Grid.RowSpan="1"
+                    TextColor="White" FontSize="Large" BackgroundColor="SteelBlue"/>
+        </Grid>
+    </ContentPage>
+
+</TabbedPage>
+    
