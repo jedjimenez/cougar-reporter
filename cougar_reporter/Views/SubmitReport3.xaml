@@ -4,21 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="cougar_reporter.Views.SubmitReport3">
-
-    <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal">
-            <Image Source="list.png" 
-                   HorizontalOptions="Start"
-                   VerticalOptions="CenterAndExpand"/>
-
-            <Label Text="Submit Ticket"
-                   TextColor="White"
-                   FontSize="Large"
-                   HorizontalOptions="StartAndExpand"
-                   VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
-    </NavigationPage.TitleView>
+             x:Class="cougar_reporter.Views.SubmitReport3"
+             Title="Submit Report">
 
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">

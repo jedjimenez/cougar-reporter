@@ -1,7 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using cougar_reporter.Services;
 using cougar_reporter.Views;
 
 namespace cougar_reporter
@@ -19,7 +18,6 @@ namespace cougar_reporter
             MainPage = new NavigationPage(); 
             MainPage = tabbedPage;
             
-  
             //MainPage = new AppShell();
             //MainPage = new NavigationPage(new SubmitReport1());
 

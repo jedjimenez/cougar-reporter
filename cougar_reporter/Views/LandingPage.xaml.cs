@@ -10,11 +10,17 @@ using Xamarin.Forms.Xaml;
 namespace cougar_reporter.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MyTicketPage : ContentPage
+    public partial class LandingPage : ContentPage
     {
-        public MyTicketPage()
+        public LandingPage()
         {
             InitializeComponent();
+            SetValue(NavigationPage.HasNavigationBarProperty, false);
+        }
+
+        private async void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Hamburger());
         }
     }
 }

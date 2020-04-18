@@ -24,6 +24,7 @@ namespace cougar_reporter.Views
         {
             InitializeComponent();
             
+
             //add possible choices to pick
             RepairPicker.Items.Add("Type 1");
             RepairPicker.Items.Add("Type 2");
