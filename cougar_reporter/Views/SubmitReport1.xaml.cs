@@ -11,15 +11,16 @@ using cougar_reporter.Views;
 namespace cougar_reporter.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SubmitReport11 : ContentPage
+    public partial class SubmitReport1 : ContentPage
     {
         //initialize value like type, building, room
+        //default values for each type
         public string Rpick = "<Repair Type>";
         public string Bpick = "<Building>";
         public string Entry1 = "<Room>";
-        public string Editor1 = "";
+        public string Editor1 = "....";
 
-        public SubmitReport11()
+        public SubmitReport1()
         {
             InitializeComponent();
             

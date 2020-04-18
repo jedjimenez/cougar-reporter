@@ -17,11 +17,11 @@ namespace cougar_reporter
             tabbedPage.Children.Add(new LoginPage()); 
             tabbedPage.Children.Add(new RegisterPage()); 
             MainPage = new NavigationPage(); 
-            MainPage = tabbedPage; 
+            MainPage = tabbedPage;
             
   
             //MainPage = new AppShell();
-            //MainPage = new NavigationPage(new SubmitReport11());
+            //MainPage = new NavigationPage(new SubmitReport1());
 
         }
 

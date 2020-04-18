@@ -30,6 +30,8 @@ namespace cougar_reporter.Views
         //Open content page
         private async void SubmitButton_Clicked(object sender, EventArgs e)
         {
+            //open content page with the user's vlaues
+            //await Navigation.PushAsync(new ContentPage(_repair, _building, _room, _des));
             await Navigation.PushAsync(new ContentPage());
         }
     }

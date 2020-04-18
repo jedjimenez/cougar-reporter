@@ -45,11 +45,11 @@
                    IsReadOnly="True"/>
 
             <Editor x:Name="Description"
-                   AutoSize="TextChanges"
-                   TextColor="Blue" 
-                   FontSize="Medium" 
-                   Margin="5, 5, 5, 5"
-                   IsReadOnly="True"/>
+                    AutoSize="TextChanges"
+                    TextColor="Blue" 
+                    FontSize="Large"
+                    Margin="5, 5, 5, 5"
+                    IsReadOnly="True" />
 
             <Image x:Name="Photo" Source="cougar.jpg"/>
 
