@@ -4,26 +4,40 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="cougar_reporter.Views.HomePage">
+             x:Class="cougar_reporter.Views.HomePage"
+             Title="Home Page">
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="250"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Label Text="Welcome to Cougar Reporter!" FontAttributes="Bold" FontSize="16" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="#1592E6"/>
-                <ImageButton Source="cougar.jpg" Grid.Row="1" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-                <Label Text="Tap the Cougar to Enter ..." TextColor="#1592E6" FontAttributes="Bold" FontSize="16" Grid.Row="2" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-                
-            </Grid>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
+            <StackLayout Orientation="Horizontal" HorizontalOptions= "Center" >
+                <Label Text="Building:" TextColor="#1592E6" FontSize="18" ></Label>
+                <Label Text="(Building)" TextColor="#1592E6" FontSize="18" ></Label>
+                <Label Text="Room:" TextColor="#1592E6" FontSize="18"></Label>
+                <Label Text="(Room)" TextColor="#1592E6" FontSize="18" ></Label>
+                <Label Text="Date:" TextColor="#1592E6" FontSize="18"></Label>
+                <Label Text="(Date)" TextColor="#1592E6" FontSize="18" ></Label>
+            </StackLayout>
+            <Image Source="cougar.jpeg"/>
+
+            <StackLayout Padding="15,10,15,10" Orientation="Horizontal" HorizontalOptions= "StartAndExpand" >
+                <Label Text ="Priority level:" HorizontalOptions="Start" TextColor="#1592E6" FontSize = "20" ></Label>
+                <Label Text ="(Priority level)" HorizontalOptions="End" TextColor="#1592E6" FontSize = "20" ></Label>
+            </StackLayout>
+
+            <StackLayout Padding="15,10,15,10" Orientation="Horizontal" HorizontalOptions= "StartAndExpand" >
+                <Label Text ="Repair:" HorizontalOptions="Start" TextColor="#1592E6" FontSize = "20" ></Label>
+                <Label Text ="(repair type)" HorizontalOptions="End" TextColor="#1592E6" FontSize = "20" ></Label>
+            </StackLayout>
+
+            <StackLayout Padding="15,10,15,10" Orientation="Horizontal" HorizontalOptions= "StartAndExpand" >
+                <Label Text ="Status:" HorizontalOptions="Start" TextColor="#1592E6" FontSize = "20" ></Label>
+                <Label Text ="(Status)" HorizontalOptions="End" TextColor="#1592E6" FontSize = "20" ></Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text ="previous" TextColor ="Black" BackgroundColor="#1592E6" Font="Poppins" Margin="50"  ></Button>
+                <Button Text ="next" TextColor ="Black" BackgroundColor ="#1592E6" Font="Poppins" Margin="50"   ></Button>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

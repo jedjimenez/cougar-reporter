@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using cougar_reporter.Views;
 
-namespace cougar_reporter.Views
+namespace cougar_reporter
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage

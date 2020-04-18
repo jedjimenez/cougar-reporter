@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace cougar_reporter.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class FillingFormPage : ContentPage
+    public partial class ViewTickets : TabbedPage
     {
-        public FillingFormPage()
+        public ViewTickets()
         {
             InitializeComponent();
         }

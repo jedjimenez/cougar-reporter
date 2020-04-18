@@ -17,7 +17,7 @@ namespace cougar_reporter
         public LoginPage()
         {
             InitializeComponent();
-
+            
         }
 
        async private void Button_Clicked(object sender, EventArgs e)
@@ -31,7 +31,7 @@ namespace cougar_reporter
 
             if (myquery != null)
             {
-                App.Current.MainPage = new NavigationPage(new HomePage());
+                App.Current.MainPage = new NavigationPage(new LandingPage());
             }
             else
             {
