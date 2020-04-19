@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:cougar_reporter.Views"
+             mc:Ignorable="d"
+             x:Class="cougar_reporter.Views.SubmitReport0"
+            BarBackgroundColor="Blue"
+            BarTextColor="White"
+            Title="Submit Ticket">
+
+    <ContentPage Title="Fill Form">
+        <StackLayout BackgroundColor="White" Padding="50" Orientation="Vertical">
+
+            <Picker x:Name="RepairPicker" 
+                    Title ="Repair Type" 
+                    TitleColor="Blue" 
+                    SelectedIndexChanged="RepairPicker_SelectedIndexChanged"
+                    HorizontalOptions="CenterAndExpand"
+                    FontSize="Large"
+                    Margin="5, 5, 5, 5">
+            </Picker>
+            <Picker x:Name="BuildingPicker" 
+                    Title ="Building Type" 
+                    TitleColor="Blue" 
+                    SelectedIndexChanged="BuildingPicker_SelectedIndexChanged"
+                    HorizontalOptions="CenterAndExpand"
+                    FontSize="Large"
+                    Margin="5, 5, 5, 5">
+            </Picker>
+            <Entry x:Name="RoomNumber" 
+                   Placeholder="Room Number"
+                   Keyboard="Numeric"
+                   TextChanged="RoomNumber_TextChanged"
+                   Completed="RoomNumber_Completed"
+                   HorizontalOptions="Center"
+                   FontSize="Large"
+                   Margin="5, 5, 5, 5">
+            </Entry>
+            <Editor x:Name ="UserText" 
+                    Placeholder="Add more details here (500 character limit)"
+                    MaxLength="500"
+                    AutoSize="TextChanges"
+                    TextChanged="UserText_TextChanged"
+                    Completed="UserText_Completed"
+                    HorizontalOptions="Center"
+                    FontSize="Large"
+                    Margin="5, 5, 5, 5">
+            </Editor>
+
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="Add Photo">
+        <StackLayout BackgroundColor="White" Padding="50">
+
+            <Label Text="Submit a photo to better help the maintenance team" 
+                   TextColor="Blue" 
+                   FontSize="25" 
+                   HorizontalTextAlignment="Center"
+                   Margin="5, 5, 5, 5"/>
+
+            <Label Text="Tap Folder to open your gallery" 
+                   TextColor="Blue" 
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   Margin="5, 10, 5, 5"/>
+
+            <ImageButton Source="folder2.png"
+                         x:Name="FolderButton"                         
+                         WidthRequest="100"
+                         HeightRequest="100"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         Clicked="FolderButton_Clicked"
+                         Margin="5, 10, 5, 5"/>
+
+            <Label Text="Tap the camera to take a photo" 
+                   TextColor="Blue" 
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   Margin="5, 5, 5, 5"/>
+
+            <ImageButton Source="camera2.png"
+                         x:Name="CameraButton"
+                         WidthRequest="100"
+                         HeightRequest="100"
+                         HorizontalOptions="Center" 
+                         VerticalOptions="Center"
+                         Clicked="CameraButton_Clicked"
+                         Margin="5, 10, 5, 5"/>
+
+            <Image x:Name="MainImage"/>
+
+            <Label x:Name="PathLabel"
+                   FontSize="14"
+                   TextColor="Black"/>
+
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="Submit">
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+            <Entry x:Name="RepairText"
+                   TextColor="Blue" 
+                   FontSize="25" 
+                   HorizontalTextAlignment="Center"
+                   Margin="5, 5, 5, 5"
+                   IsReadOnly="True"/>
+
+            <Entry x:Name="BuildingText"
+                   TextColor="Blue" 
+                   FontSize="25" 
+                   HorizontalTextAlignment="Center"
+                   Margin="5, 5, 5, 5"
+                   IsReadOnly="True"/>
+
+            <Entry x:Name="RoomText"
+                   TextColor="Blue" 
+                   FontSize="25" 
+                   HorizontalTextAlignment="Center"
+                   Margin="5, 5, 5, 5"
+                   IsReadOnly="True"/>
+
+            <Editor x:Name="Description"
+                    AutoSize="TextChanges"
+                    TextColor="Blue" 
+                    FontSize="Large"
+                    Margin="5, 5, 5, 5"
+                    IsReadOnly="True" />
+
+            <Image x:Name="Photo" Source="cougar.jpg"/>
+
+            <Button x:Name="SubmitButton"
+                    Text="Submit"
+                    Clicked="SubmitButton_Clicked"/>
+
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>
