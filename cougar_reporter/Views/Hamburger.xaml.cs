@@ -23,7 +23,7 @@ namespace cougar_reporter.Views
         //submit report page
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new SubmitReport1());
+            Detail = new NavigationPage(new SubmitReport0());
         }
 
         //home page
