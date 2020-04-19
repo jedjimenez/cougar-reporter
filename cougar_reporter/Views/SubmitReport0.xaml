@@ -8,7 +8,7 @@
             xmlns:local="clr-namespace:cougar_reporter.Views"
              mc:Ignorable="d"
              x:Class="cougar_reporter.Views.SubmitReport0"
-            BarBackgroundColor="Blue"
+            BarBackgroundColor="#1592E6"
             BarTextColor="White"
             Title="Submit Ticket">
 
@@ -17,7 +17,7 @@
 
             <Picker x:Name="RepairPicker" 
                     Title ="Repair Type" 
-                    TitleColor="Blue" 
+                    TitleColor="#1592E6" 
                     SelectedIndexChanged="RepairPicker_SelectedIndexChanged"
                     HorizontalOptions="CenterAndExpand"
                     FontSize="Large"
@@ -25,7 +25,7 @@
             </Picker>
             <Picker x:Name="BuildingPicker" 
                     Title ="Building Type" 
-                    TitleColor="Blue" 
+                    TitleColor="#1592E6" 
                     SelectedIndexChanged="BuildingPicker_SelectedIndexChanged"
                     HorizontalOptions="CenterAndExpand"
                     FontSize="Large"
@@ -58,13 +58,13 @@
         <StackLayout BackgroundColor="White" Padding="50">
 
             <Label Text="Submit a photo to better help the maintenance team" 
-                   TextColor="Blue" 
+                   TextColor="#1592E6" 
                    FontSize="25" 
                    HorizontalTextAlignment="Center"
                    Margin="5, 5, 5, 5"/>
 
             <Label Text="Tap Folder to open your gallery" 
-                   TextColor="Blue" 
+                   TextColor="#1592E6" 
                    FontSize="20"
                    HorizontalTextAlignment="Center"
                    Margin="5, 10, 5, 5"/>
@@ -79,7 +79,7 @@
                          Margin="5, 10, 5, 5"/>
 
             <Label Text="Tap the camera to take a photo" 
-                   TextColor="Blue" 
+                   TextColor="#1592E6" 
                    FontSize="20"
                    HorizontalTextAlignment="Center"
                    Margin="5, 5, 5, 5"/>
@@ -106,21 +106,21 @@
         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
 
             <Entry x:Name="RepairText"
-                   TextColor="Blue" 
+                   TextColor="#1592E6" 
                    FontSize="25" 
                    HorizontalTextAlignment="Center"
                    Margin="5, 5, 5, 5"
                    IsReadOnly="True"/>
 
             <Entry x:Name="BuildingText"
-                   TextColor="Blue" 
+                   TextColor="#1592E6" 
                    FontSize="25" 
                    HorizontalTextAlignment="Center"
                    Margin="5, 5, 5, 5"
                    IsReadOnly="True"/>
 
             <Entry x:Name="RoomText"
-                   TextColor="Blue" 
+                   TextColor="#1592E6" 
                    FontSize="25" 
                    HorizontalTextAlignment="Center"
                    Margin="5, 5, 5, 5"

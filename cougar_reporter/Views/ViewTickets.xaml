@@ -3,9 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             android:TabbedPage.ToolbarPlacement="Bottom"
              mc:Ignorable="d"
              x:Class="cougar_reporter.Views.ViewTickets"
-            Title="View Tickets">
+             BarBackgroundColor="#1592E6"
+             BarTextColor="White"
+             Title="My Tickets">
     
     <ContentPage Title="View">
         <Grid>
@@ -48,7 +52,7 @@
             <Label Text="Priority Level" 
                    VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
                    Grid.Row="4" Grid.Column="0" 
-                   FontSize="Large"/>
+                   FontSize="Large" TextColor="#1592E6"/>
             <Entry Text="Number" 
                    VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
                    Grid.Row="4" Grid.Column="2" 
@@ -56,7 +60,7 @@
             <Label Text="Repair" 
                    VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
                    Grid.Row="5" Grid.Column="0" 
-                   FontSize="Large"/>
+                   FontSize="Large" TextColor="#1592E6"/>
             <Entry Text="Repair Type" 
                    VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
                    Grid.Row="5" Grid.Column="2"
@@ -64,7 +68,7 @@
             <Label Text="Status" 
                    VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
                    Grid.Row="6" Grid.Column="0" 
-                   FontSize="Large"/>
+                   FontSize="Large" TextColor="#1592E6"/>
             <Entry Text="Status" 
                    VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
                    Grid.Row="6" Grid.Column="2" 
@@ -94,19 +98,19 @@
             </Grid.ColumnDefinitions>
 
             <Entry Text="Repair Type" 
-                   FontSize="Large" TextColor="Blue" 
+                   FontSize="Large" TextColor="#1592E6" 
                    VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
                    Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1"/>
             <Entry Text="Building" 
-                   FontSize="Large" TextColor="Blue" 
+                   FontSize="Large" TextColor="#1592E6" 
                    VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
                    Grid.Row="2" Grid.Column="1"/>
             <Entry Text="Room" 
-                   FontSize="Large" TextColor="Blue" 
+                   FontSize="Large" TextColor="#1592E6" 
                    VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
                    Grid.Row="3" Grid.Column="1" />
             <Editor Text=" " 
-                    FontSize="Large" TextColor="Blue" 
+                    FontSize="Large" TextColor="#1592E6" 
                     VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
                     Placeholder="Add more details here (500 character limit)" 
                     Grid.Row="4" Grid.Column="1" />
@@ -128,7 +132,7 @@
             </Grid.ColumnDefinitions>
 
             <Label Text="Do you want to take a photo and add it to the report?" 
-                   FontSize="Large" TextColor="Blue" 
+                   FontSize="Large" TextColor="#1592E6" 
                    VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
                    Grid.Row="0" Grid.Column="1"/>
 
@@ -156,7 +160,7 @@
             </Grid.ColumnDefinitions>
 
             <Label Text="Are you sure you want to delete the ticket?" 
-                   FontSize="Large" TextColor="Blue" 
+                   FontSize="Large" TextColor="#1592E6" 
                    VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
                    Grid.Row="0" Grid.Column="1"/>
 
