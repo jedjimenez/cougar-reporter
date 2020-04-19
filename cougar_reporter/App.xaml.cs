@@ -11,15 +11,15 @@ namespace cougar_reporter
         public App()
         {
             InitializeComponent();
-
+            /*
             var tabbedPage = new TabbedPage();
             tabbedPage.Children.Add(new LoginPage()); 
             tabbedPage.Children.Add(new RegisterPage()); 
             MainPage = new NavigationPage(); 
-            MainPage = tabbedPage;
+            MainPage = tabbedPage;*/
             
             //MainPage = new AppShell();
-            //MainPage = new NavigationPage(new SubmitReport1());
+            MainPage = new NavigationPage(new SubmitReport0());
 
         }
 
