@@ -14,22 +14,38 @@ namespace cougar_reporter.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SubmitReport0 : TabbedPage
     {
+        /*
         public string Rpick = "<Repair Type>";
         public string Bpick = "<Building>";
         public string Entry1 = "<Room>";
-        public string Editor1 = "....";
+        public string Editor1 = "....";*/
         public SubmitReport0()
         {
             InitializeComponent();
             //add possible choices to pick
-            RepairPicker.Items.Add("Type 1");
-            RepairPicker.Items.Add("Type 2");
-            RepairPicker.Items.Add("Type 3");
-            RepairPicker.Items.Add("Type 4");
-            BuildingPicker.Items.Add("Building 1");
-            BuildingPicker.Items.Add("Building 2");
-            BuildingPicker.Items.Add("Building 3");
-            BuildingPicker.Items.Add("Building 4");
+            RepairPicker.Items.Add("Damage");
+            RepairPicker.Items.Add("Cleanliness");
+            RepairPicker.Items.Add("Cosmetic");
+            RepairPicker.Items.Add("Technical");
+            RepairPicker.Items.Add("Electrical");
+            RepairPicker.Items.Add("Plumbing");
+            RepairPicker.Items.Add("Equipment");
+            RepairPicker.Items.Add("Other");
+            BuildingPicker.Items.Add("Academic Hall");
+            BuildingPicker.Items.Add("Arts Building");
+            BuildingPicker.Items.Add("Markstein Hall");
+            BuildingPicker.Items.Add("Craven Hall");
+            BuildingPicker.Items.Add("Kellog Library");
+            BuildingPicker.Items.Add("Science Hall I");
+            BuildingPicker.Items.Add("Science Hall II");
+            BuildingPicker.Items.Add("SBSB");
+            BuildingPicker.Items.Add("SHCS");
+            BuildingPicker.Items.Add("University Hall");
+            BuildingPicker.Items.Add("USU");
+            RepairText.Text = "<Repair Type>";
+            BuildingText.Text = "<Building>";
+            RoomText.Text = "<Room>";
+            Description.Text = "...";
         }
 
         private void RepairPicker_SelectedIndexChanged(object sender, EventArgs e)

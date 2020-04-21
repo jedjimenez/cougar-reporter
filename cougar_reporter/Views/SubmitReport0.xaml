@@ -24,7 +24,7 @@
                     Margin="5, 5, 5, 5">
             </Picker>
             <Picker x:Name="BuildingPicker" 
-                    Title ="Building Type" 
+                    Title ="Building" 
                     TitleColor="#1592E6" 
                     SelectedIndexChanged="BuildingPicker_SelectedIndexChanged"
                     HorizontalOptions="CenterAndExpand"
@@ -102,7 +102,7 @@
         </StackLayout>
     </ContentPage>
 
-    <ContentPage Title="Submit">
+    <ContentPage Title="Review">
         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
 
             <Entry x:Name="RepairText"
