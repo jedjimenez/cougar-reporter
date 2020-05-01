@@ -12,12 +12,11 @@ namespace cougar_reporter
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
-    
 
+        public static string uName;
         public LoginPage()
         {
             InitializeComponent();
-            
         }
 
        async private void Button_Clicked(object sender, EventArgs e)
@@ -27,23 +26,26 @@ namespace cougar_reporter
             //create database
             var db = new SQLiteConnection(dbpath);
             //set up query to insert into database
-            var myquery = db.Table<RegUserTable>().Where(u => u.Email.Equals(username.Text) && u.Password.Equals(password.Text)).FirstOrDefault();
+            var myquery = db.Table<RegisteredUsers>().Where(u => u.UserName.Equals(username.Text) && u.Password.Equals(password.Text)).FirstOrDefault();
 
             if (myquery != null)
             {
-                App.Current.MainPage = new NavigationPage(new LandingPage());
+                uName = username.Text;
+                App.Current.MainPage = new NavigationPage(new LandingPage(uName));
             }
             else
             {
                 Device.BeginInvokeOnMainThread(async () =>
                 {
                     //initialize all possible cases
-                    var result = await this.DisplayAlert("Error!", "Wrong username or password. Enter again.", "Yes", "Cancel");
+                    // var result = await this.DisplayAlert("Error!", "Wrong username or password. Enter again.", "Yes", "Cancel");
 
-                    if (result)
-                        await Navigation.PushModalAsync(new LoginPage());
-                    else
-                        await Navigation.PushModalAsync(new LoginPage());
+                    await this.DisplayAlert("Error!", "Wrong username or password. Enter again.", "Yes", "Cancel");
+
+                    /* if (result)
+                         await Navigation.PushModalAsync(new LoginPage());
+                     else
+                         await Navigation.PushModalAsync(new LoginPage());*/
 
 
                 });

@@ -9,19 +9,20 @@
         <StackLayout>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="250"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label Text="Welcome to Cougar Reporter!" FontAttributes="Bold" FontSize="16" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="#1592E6"/>
-                <ImageButton Source="cougar.jpg" Grid.Row="1" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Clicked="ImageButton_Clicked"/>
-                <Label Text="Tap the Cougar to Enter ..." TextColor="#1592E6" FontAttributes="Bold" FontSize="16" Grid.Row="2" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Label Text="Cougar Reporter" FontAttributes="Bold" FontSize="25" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="#1592E6"/>
+                <Label x:Name="l" FontSize="18" Grid.Row="1" Grid.Column="1" HorizontalOptions="CenterAndExpand" TextColor="#1592E6"/>
+                <ImageButton Source="cougar.jpg" Grid.Row="2" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Clicked="ImageButton_Clicked"/>
+                <Label Text="Tap the Cougar to Enter ..." TextColor="#1592E6" FontAttributes="Bold" FontSize="16" Grid.Row="3" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                 
             </Grid>
         </StackLayout>

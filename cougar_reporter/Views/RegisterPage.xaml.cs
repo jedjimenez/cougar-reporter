@@ -22,21 +22,23 @@ namespace cougar_reporter.Views
 
         public void Button_Clicked(object sender, EventArgs e)
         {
+
             //get data path
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDatabase.db");
             //create database with SQL
             var db = new SQLiteConnection(dbpath);
             //create database with table
-            db.CreateTable<RegUserTable>();
+            db.CreateTable<RegisteredUsers>();
             
             //create table with Email and password
-            var item = new RegUserTable()
+            var item = new RegisteredUsers()
             {
               
-                Email = email.Text,
+                UserName = username.Text,
                 Password = pswd.Text, 
-          
-
+                firstName = fName.Text,
+                lastName = lName.Text,
+                AccountType = type.Id  
 
             };
             
