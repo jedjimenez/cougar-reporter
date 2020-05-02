@@ -12,16 +12,18 @@ namespace cougar_reporter.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LandingPage : ContentPage
     {
+        public string username;
         public LandingPage(string u)
         {
             InitializeComponent();
             SetValue(NavigationPage.HasNavigationBarProperty, false);
-            l.Text = "Welcome <" + u + ">!"; 
+            l.Text = "Welcome <" + u + ">!";
+            username = u;
         }
 
         private async void ImageButton_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Hamburger());
+            await Navigation.PushAsync(new Hamburger(username));
         }
     }
 }

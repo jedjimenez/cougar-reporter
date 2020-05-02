@@ -12,24 +12,25 @@ namespace cougar_reporter.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Hamburger : MasterDetailPage
     {
-        public Hamburger()
+        public string username;
+        public Hamburger(string u)
         {
             InitializeComponent();
             SetValue(NavigationPage.HasNavigationBarProperty, false);
-
-            Detail = new NavigationPage(new HomePage());
+            username = u;
+            Detail = new NavigationPage(new HomePage(username));
         }
 
         //submit report page
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new SubmitReport0());
+            Detail = new NavigationPage(new SubmitReport0(username));
         }
 
         //home page
         private void Button_Clicked_1(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new HomePage());
+            Detail = new NavigationPage(new HomePage(username));
         }
 
         //logout
@@ -40,7 +41,7 @@ namespace cougar_reporter.Views
 
         private void Button_Clicked_3(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new ViewTickets());
+            Detail = new NavigationPage(new ViewTickets(username));
         }
     }
 }

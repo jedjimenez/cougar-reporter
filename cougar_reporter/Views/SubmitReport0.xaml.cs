@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using cougar_reporter.Models;
 
 namespace cougar_reporter.Views
 {
@@ -19,7 +20,8 @@ namespace cougar_reporter.Views
         public string Bpick = "<Building>";
         public string Entry1 = "<Room>";
         public string Editor1 = "....";*/
-        public SubmitReport0()
+        public static string username;
+        public SubmitReport0(string u)
         {
             InitializeComponent();
             //add possible choices to pick
@@ -46,6 +48,8 @@ namespace cougar_reporter.Views
             BuildingText.Text = "<Building>";
             RoomText.Text = "<Room>";
             Description.Text = "...";
+
+            username = u;
         }
 
         private void RepairPicker_SelectedIndexChanged(object sender, EventArgs e)
@@ -161,9 +165,11 @@ namespace cougar_reporter.Views
 
         private async void SubmitButton_Clicked(object sender, EventArgs e)
         {
-            //open content page with the user's vlaues
-            //await Navigation.PushAsync(new ContentPage(_repair, _building, _room, _des));
-            await Navigation.PushAsync(new ContentPage());
+            string repair = RepairPicker.Items[RepairPicker.SelectedIndex];
+            string build = BuildingPicker.Items[BuildingPicker.SelectedIndex];
+
+            await FirebaseHelper.AddInfo(username, repair, build, RoomNumber.Text, UserText.Text);
+            
         }
     }
 }
