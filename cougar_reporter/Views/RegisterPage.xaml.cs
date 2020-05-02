@@ -23,17 +23,37 @@ namespace cougar_reporter.Views
 
         public async void Button_Clicked(object sender, EventArgs e)
         {
-            //null or empty field validation, check weather email and password is null or empty    
+
 
             if (string.IsNullOrEmpty(username.Text) || string.IsNullOrEmpty(pswd.Text))
-                await App.Current.MainPage.DisplayAlert("Empty Values", "Please enter Email and Password", "OK");
+            {
+                await App.Current.MainPage.DisplayAlert(" ", "Please enter Email and Password", "OK");
+            }
+            else if (pswd.Text != confpswd.Text)
+            {
+                await App.Current.MainPage.DisplayAlert(" ", "Passwords do not match", "OK");
+            }
+            else if (string.IsNullOrEmpty(id.Text))
+            {
+                await App.Current.MainPage.DisplayAlert(" ", "Please enter CSUSM ID number", "OK");
+            }
+            else if (type.SelectedIndex == -1)
+            {
+                await App.Current.MainPage.DisplayAlert(" ", "Please choose type of user", "OK");
+            }
             else
             {
-               
-                    //call AddUser function which we define in Firebase helper class    
-                    var user = await FirebaseHelper.AddUser(username.Text, pswd.Text, type.SelectedIndex);
-                    //AddUser return true if data insert successfuly     
 
+                var person = await FirebaseHelper.GetUser(username.Text);
+                if (person != null)
+                {
+                    await this.DisplayAlert("Error", "Username already exists", "Ok");
+                }
+                else
+                {
+ 
+                    var user = await FirebaseHelper.AddUser(username.Text, pswd.Text, type.SelectedIndex, id.Text);
+             
                     if (user)
                     {
                         await this.DisplayAlert("You have sucessfully registered", "", "Ok");
@@ -41,13 +61,12 @@ namespace cougar_reporter.Views
                     }
                     else
                         await this.DisplayAlert("Error", "SignUp Fail", "OK");
-         
 
+                }
             }
         }
 
     
     }
 }
-//await Navigation.PushModalAsync(new LoginPage());
 

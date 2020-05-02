@@ -8,7 +8,7 @@ namespace cougar_reporter.Models
     //[Table(nameof(RegisteredUsers))]
     class RegisteredUsers
     {
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
         public string firstName { get; set; }

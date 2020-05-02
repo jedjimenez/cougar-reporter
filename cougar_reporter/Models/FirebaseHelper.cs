@@ -55,15 +55,14 @@ namespace cougar_reporter.Models
             }
         }
 
-
-        //Inser a user    
-        public static async Task<bool> AddUser(string username, string password, int type)
+        //Insert a user    
+        public static async Task<bool> AddUser(string username, string password, int type, string id)
         {
             try
             {
                 await firebase
                 .Child("Users")
-                .PostAsync(new RegisteredUsers() { UserName = username, Password = password, AccountType = type });
+                .PostAsync(new RegisteredUsers() { UserName = username, Password = password, AccountType = type, UserId = id });
                 return true;
             }
             catch (Exception e)

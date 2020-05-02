@@ -15,8 +15,7 @@
             <Entry x:Name="username" Placeholder="Username" PlaceholderColor="#1592E6"></Entry>
             <Entry x:Name="pswd" Placeholder="Password" IsPassword="True" PlaceholderColor="#1592E6"></Entry>
             <Entry x:Name="confpswd" Placeholder="Confirm Password" IsPassword="True" PlaceholderColor="#1592E6"></Entry>
-            <Label x:Name="id" Text="CSUSM ID Number" TextColor="#1592E6"></Label>
-            <Editor></Editor>
+            <Entry x:Name="id" Placeholder="CSUSM ID number" PlaceholderColor="#1592E6" TextColor="#1592E6"></Entry>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Are you..." TextColor="#1592E6" />
                 <Picker x:Name="type" Title="Choose Account Type" TitleColor="#1592E6" HorizontalOptions="FillAndExpand">

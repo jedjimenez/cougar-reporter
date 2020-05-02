@@ -22,8 +22,7 @@ namespace cougar_reporter
 
        async private void Button_Clicked(object sender, EventArgs e)
         {
-            //null or empty field validation, check weather email and password is null or empty    
-
+         
             if (string.IsNullOrEmpty(username.Text) || string.IsNullOrEmpty(password.Text))
                 await App.Current.MainPage.DisplayAlert("Empty Values", "Please enter Email and Password", "OK");
             else
@@ -35,8 +34,6 @@ namespace cougar_reporter
                     if (username.Text == user.UserName && password.Text == user.Password)
                     {
                         await App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
-                        //Navigate to Wellcom page after successfuly login    
-                        //pass user email to welcom page    
                         App.Current.MainPage = new NavigationPage(new LandingPage(user.UserName));
                     }
                     else
@@ -45,10 +42,7 @@ namespace cougar_reporter
                     await App.Current.MainPage.DisplayAlert("Login Fail", "User not found", "OK");
             }
 
-            //await  Navigation.PushModalAsync(new HomePage());
         }
 
     }
-
-   // App.Current.MainPage = new NavigationPage(new LandingPage(uName));
 }
