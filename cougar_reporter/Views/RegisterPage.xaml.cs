@@ -8,7 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using cougar_reporter.Models;
 using System.IO;
-using SQLite;
+
 
 namespace cougar_reporter.Views
 {
@@ -51,16 +51,17 @@ namespace cougar_reporter.Views
                 }
                 else
                 {
- 
-                    var user = await FirebaseHelper.AddUser(username.Text, pswd.Text, type.SelectedIndex, id.Text);
-             
+                    string name = type.Items[type.SelectedIndex];
+
+                    var user = await FirebaseHelper.AddUser(username.Text, pswd.Text, name, id.Text);
+
                     if (user)
                     {
-                        await this.DisplayAlert("You have sucessfully registered", "", "Ok");
+                        await this.DisplayAlert(" ", "You have sucessfully registered", "Ok");
                         await Navigation.PushModalAsync(new MainPage());
                     }
                     else
-                        await this.DisplayAlert("Error", "SignUp Fail", "OK");
+                        await this.DisplayAlert("Error", "Signing Up Failed", "OK");
 
                 }
             }

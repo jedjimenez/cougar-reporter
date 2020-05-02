@@ -5,7 +5,6 @@ using Firebase.Database;
 using Firebase.Database.Query;
 using System.Linq;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using System.Diagnostics;
 
 namespace cougar_reporter.Models
@@ -37,7 +36,7 @@ namespace cougar_reporter.Models
             }
         }
 
-        //Read     
+        //retrieve data of the specific user     
         public static async Task<RegisteredUsers> GetUser(string username)
         {
             try
@@ -55,14 +54,12 @@ namespace cougar_reporter.Models
             }
         }
 
-        //Insert a user    
-        public static async Task<bool> AddUser(string username, string password, int type, string id)
+        //add user information to the database  
+        public static async Task<bool> AddUser(string username, string password, string type, string id)
         {
             try
             {
-                await firebase
-                .Child("Users")
-                .PostAsync(new RegisteredUsers() { UserName = username, Password = password, AccountType = type, UserId = id });
+                await firebase.Child("Users").PostAsync(new RegisteredUsers() { UserName = username, Password = password, AccountType = type, UserId = id });
                 return true;
             }
             catch (Exception e)
@@ -71,6 +68,27 @@ namespace cougar_reporter.Models
                 return false;
             }
         }
+
+        //add Ticket Information to the database
+        public static async Task AddInfo(string u, string repair, string build, string roomNum, string desc)
+        {
+            try
+            {
+                var addInfo = (await firebase.Child("Users").OnceAsync<RegisteredUsers>()).Where(a => a.Object.UserName == u).FirstOrDefault();
+
+                await firebase
+                .Child("Users").Child(addInfo.Key)
+                .PostAsync(new Ticket() {RepairType = repair, Building = build, RoomNum = roomNum, Description = desc });
+              
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine($"Error:{e}");
+            
+            }
+        }
+
+
 
     }
 }

@@ -12,7 +12,7 @@ namespace cougar_reporter.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ViewTickets : TabbedPage
     {
-        public ViewTickets()
+        public ViewTickets(string u)
         {
             InitializeComponent();
         }

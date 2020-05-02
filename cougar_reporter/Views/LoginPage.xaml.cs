@@ -29,17 +29,17 @@ namespace cougar_reporter
             {
                 //call GetUser function which we define in Firebase helper class    
                 var user = await FirebaseHelper.GetUser(username.Text);
-                //firebase return null valuse if user data not found in database    
+                //firebase return null value if user data not found in database    
                 if (user != null)
                     if (username.Text == user.UserName && password.Text == user.Password)
                     {
-                        await App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
+                        await App.Current.MainPage.DisplayAlert(" ", "Successfully Logged In", "Ok");
                         App.Current.MainPage = new NavigationPage(new LandingPage(user.UserName));
                     }
                     else
-                        await App.Current.MainPage.DisplayAlert("Login Fail", "Please enter correct Email and Password", "OK");
+                        await App.Current.MainPage.DisplayAlert("Login Failed", "Please enter correct Username and Password", "OK");
                 else
-                    await App.Current.MainPage.DisplayAlert("Login Fail", "User not found", "OK");
+                    await App.Current.MainPage.DisplayAlert("Login Failed", "User not found", "OK");
             }
 
         }
