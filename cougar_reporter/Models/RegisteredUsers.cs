@@ -5,7 +5,7 @@ using System.Text;
 
 namespace cougar_reporter.Models
 {
-    [Table(nameof(RegisteredUsers))]
+    //[Table(nameof(RegisteredUsers))]
     class RegisteredUsers
     {
         public Guid UserId { get; set; }
@@ -13,6 +13,6 @@ namespace cougar_reporter.Models
         public string Password { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
-        public Guid AccountType { get; set; }
+        public int AccountType { get; set; }
     }
 }

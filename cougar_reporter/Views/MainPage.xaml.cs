@@ -10,11 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace cougar_reporter
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPage : ContentPage
+    public partial class MainPage : TabbedPage
     {
         public MainPage()
         {
             InitializeComponent();
+            SetValue(NavigationPage.HasNavigationBarProperty, false);
         }
     }
 }

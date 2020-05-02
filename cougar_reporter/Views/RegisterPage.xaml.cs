@@ -18,49 +18,36 @@ namespace cougar_reporter.Views
         public RegisterPage()
         {
             InitializeComponent();
+            SetValue(NavigationPage.HasNavigationBarProperty, false);
         }
 
-        public void Button_Clicked(object sender, EventArgs e)
+        public async void Button_Clicked(object sender, EventArgs e)
         {
+            //null or empty field validation, check weather email and password is null or empty    
 
-            //get data path
-            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDatabase.db");
-            //create database with SQL
-            var db = new SQLiteConnection(dbpath);
-            //create database with table
-            db.CreateTable<RegisteredUsers>();
-            
-            //create table with Email and password
-            var item = new RegisteredUsers()
+            if (string.IsNullOrEmpty(username.Text) || string.IsNullOrEmpty(pswd.Text))
+                await App.Current.MainPage.DisplayAlert("Empty Values", "Please enter Email and Password", "OK");
+            else
             {
-              
-                UserName = username.Text,
-                Password = pswd.Text, 
-                firstName = fName.Text,
-                lastName = lName.Text,
-                AccountType = type.Id  
+               
+                    //call AddUser function which we define in Firebase helper class    
+                    var user = await FirebaseHelper.AddUser(username.Text, pswd.Text, type.SelectedIndex);
+                    //AddUser return true if data insert successfuly     
 
-            };
-            
-            //insert into database
-            db.Insert(item);
-            Device.BeginInvokeOnMainThread(async () =>
-            {
-                //all possible cases
-                var result = await this.DisplayAlert("Congratulations!", "User registration successfull", "Yes", "Cancel");
-
-                if (result)
-                    await Navigation.PushModalAsync(new LoginPage());
+                    if (user)
+                    {
+                        await this.DisplayAlert("You have sucessfully registered", "", "Ok");
+                        await Navigation.PushModalAsync(new MainPage());
+                    }
+                    else
+                        await this.DisplayAlert("Error", "SignUp Fail", "OK");
+         
 
             }
-
-
-            );
         }
 
-        public async void Button_Clicked_1(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new LoginPage());
-        }
+    
     }
 }
+//await Navigation.PushModalAsync(new LoginPage());
+

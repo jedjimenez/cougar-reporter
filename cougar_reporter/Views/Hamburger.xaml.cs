@@ -35,7 +35,7 @@ namespace cougar_reporter.Views
         //logout
         private void Button_Clicked_2(object sender, EventArgs e)
         {
-            App.Current.MainPage = new LoginPage();
+            App.Current.MainPage = new MainPage();
         }
 
         private void Button_Clicked_3(object sender, EventArgs e)

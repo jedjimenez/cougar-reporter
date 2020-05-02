@@ -13,46 +13,42 @@ namespace cougar_reporter
     public partial class LoginPage : ContentPage
     {
 
-        public static string uName;
         public LoginPage()
         {
             InitializeComponent();
+            SetValue(NavigationPage.HasNavigationBarProperty, false);
+
         }
 
        async private void Button_Clicked(object sender, EventArgs e)
         {
-            //create database folder
-            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDatabase.db");
-            //create database
-            var db = new SQLiteConnection(dbpath);
-            //set up query to insert into database
-            var myquery = db.Table<RegisteredUsers>().Where(u => u.UserName.Equals(username.Text) && u.Password.Equals(password.Text)).FirstOrDefault();
+            //null or empty field validation, check weather email and password is null or empty    
 
-            if (myquery != null)
-            {
-                uName = username.Text;
-                App.Current.MainPage = new NavigationPage(new LandingPage(uName));
-            }
+            if (string.IsNullOrEmpty(username.Text) || string.IsNullOrEmpty(password.Text))
+                await App.Current.MainPage.DisplayAlert("Empty Values", "Please enter Email and Password", "OK");
             else
             {
-                Device.BeginInvokeOnMainThread(async () =>
-                {
-                    //initialize all possible cases
-                    // var result = await this.DisplayAlert("Error!", "Wrong username or password. Enter again.", "Yes", "Cancel");
-
-                    await this.DisplayAlert("Error!", "Wrong username or password. Enter again.", "Yes", "Cancel");
-
-                    /* if (result)
-                         await Navigation.PushModalAsync(new LoginPage());
-                     else
-                         await Navigation.PushModalAsync(new LoginPage());*/
-
-
-                });
+                //call GetUser function which we define in Firebase helper class    
+                var user = await FirebaseHelper.GetUser(username.Text);
+                //firebase return null valuse if user data not found in database    
+                if (user != null)
+                    if (username.Text == user.UserName && password.Text == user.Password)
+                    {
+                        await App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
+                        //Navigate to Wellcom page after successfuly login    
+                        //pass user email to welcom page    
+                        App.Current.MainPage = new NavigationPage(new LandingPage(user.UserName));
+                    }
+                    else
+                        await App.Current.MainPage.DisplayAlert("Login Fail", "Please enter correct Email and Password", "OK");
+                else
+                    await App.Current.MainPage.DisplayAlert("Login Fail", "User not found", "OK");
             }
 
             //await  Navigation.PushModalAsync(new HomePage());
         }
 
     }
+
+   // App.Current.MainPage = new NavigationPage(new LandingPage(uName));
 }
