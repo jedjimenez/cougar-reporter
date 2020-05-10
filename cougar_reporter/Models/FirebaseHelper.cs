@@ -35,7 +35,28 @@ namespace cougar_reporter.Models
                 return null;
             }
         }
-
+        public static async Task<List<Ticket>> GetAllRepairs()
+        {
+            try
+            {
+                var repairlist = (await firebase
+                .Child("Users")
+                .OnceAsync<Ticket>()).Select(item =>
+                new Ticket
+                {
+                    RepairType = item.Object.RepairType,
+                    Building = item.Object.Building,
+                    RoomNum = item.Object.RoomNum,
+                    Description = item.Object.Description
+                }).ToList();
+                return repairlist;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine($"Error:{e}");
+                return null;
+            }
+        }
         //retrieve data of the specific user     
         public static async Task<RegisteredUsers> GetUser(string username)
         {
@@ -53,7 +74,19 @@ namespace cougar_reporter.Models
                 return null;
             }
         }
-
+        public static async Task<Ticket> GetRepair(string username)
+        {
+            try
+            {
+                RegisteredUsers temp = await GetUser(username);
+                return temp.
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine($"Error:{e}");
+                return null;
+            }
+        }
         //add user information to the database  
         public static async Task<bool> AddUser(string username, string password, string type, string id)
         {
@@ -79,7 +112,7 @@ namespace cougar_reporter.Models
                 await firebase
                 .Child("Users").Child(addInfo.Key)
                 .PostAsync(new Ticket() {RepairType = repair, Building = build, RoomNum = roomNum, Description = desc });
-              
+                
             }
             catch (Exception e)
             {
@@ -87,8 +120,5 @@ namespace cougar_reporter.Models
             
             }
         }
-
-
-
     }
 }
