@@ -78,8 +78,8 @@ namespace cougar_reporter.Models
         {
             try
             {
-                RegisteredUsers temp = await GetUser(username);
-                return temp.
+                var allRepair = await GetUser(username);
+                return allRepair.Child("Users").Child(RepairType, Building, RoomNum, Description)
             }
             catch (Exception e)
             {
