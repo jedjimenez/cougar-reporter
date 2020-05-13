@@ -17,7 +17,7 @@ namespace cougar_reporter.Views
         {
             InitializeComponent();
             SetValue(NavigationPage.HasNavigationBarProperty, false);
-            l.Text = "Welcome <" + u + ">!";
+            l.Text = "Welcome " + u + "!";
             username = u;
         }
 
