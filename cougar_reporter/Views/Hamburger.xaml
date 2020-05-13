@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="cougar_reporter.Views.Hamburger"
-             Title="Home Page">
+             Title="Home Page" >
 
     <MasterDetailPage.Master>
         <ContentPage Padding="10" Title="Master">
