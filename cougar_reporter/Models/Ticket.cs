@@ -11,6 +11,5 @@ namespace cougar_reporter.Models
         public string Building { get; set; }
         public string RoomNum { get; set; }
         public string Description { get; set; }
-
     }
 }

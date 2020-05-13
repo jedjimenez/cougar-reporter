@@ -15,11 +15,7 @@ namespace cougar_reporter.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SubmitReport0 : TabbedPage
     {
-        /*
-        public string Rpick = "<Repair Type>";
-        public string Bpick = "<Building>";
-        public string Entry1 = "<Room>";
-        public string Editor1 = "....";*/
+    
         public static string username;
         public SubmitReport0(string u)
         {

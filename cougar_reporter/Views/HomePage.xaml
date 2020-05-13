@@ -26,7 +26,7 @@
 
             <StackLayout Padding="15,10,15,10" Orientation="Horizontal" HorizontalOptions= "StartAndExpand" >
                 <Label Text ="Repair:" HorizontalOptions="Start" TextColor="#1592E6" FontSize = "20" ></Label>
-                <Label Text ="(repair type)" HorizontalOptions="End" TextColor="#1592E6" FontSize = "20" ></Label>
+                <Label Text = "(repair type)" HorizontalOptions="End" TextColor="#1592E6" FontSize = "20" ></Label>
             </StackLayout>
 
             <StackLayout Padding="15,10,15,10" Orientation="Horizontal" HorizontalOptions= "StartAndExpand" >

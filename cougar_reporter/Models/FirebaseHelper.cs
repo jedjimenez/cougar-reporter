@@ -23,6 +23,8 @@ namespace cougar_reporter.Models
                 .OnceAsync<RegisteredUsers>()).Select(item =>
                 new RegisteredUsers
                 {
+                    firstName = item.Object.firstName,
+                    lastName = item.Object.lastName,
                     UserName = item.Object.UserName,
                     Password = item.Object.Password,
                     AccountType = item.Object.AccountType
@@ -88,11 +90,11 @@ namespace cougar_reporter.Models
             }
         }
         //add user information to the database  
-        public static async Task<bool> AddUser(string username, string password, string type, string id)
+        public static async Task<bool> AddUser(string fName, string lName, string username, string password, string type, string id)
         {
             try
             {
-                await firebase.Child("Users").PostAsync(new RegisteredUsers() { UserName = username, Password = password, AccountType = type, UserId = id });
+                await firebase.Child("Users").PostAsync(new RegisteredUsers() {firstName = fName, lastName = lName, UserName = username, Password = password, AccountType = type, UserId = id });
                 return true;
             }
             catch (Exception e)

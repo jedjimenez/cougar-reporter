@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using cougar_reporter.Models;
 
 namespace cougar_reporter.Views
 {
@@ -15,6 +16,8 @@ namespace cougar_reporter.Views
         public HomePage(string u)
         {
             InitializeComponent();
+            
         }
+
     }
 }
