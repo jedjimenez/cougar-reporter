@@ -13,11 +13,11 @@ namespace cougar_reporter.Views
     public partial class LandingPage : ContentPage
     {
         public string username;
-        public LandingPage(string u)
+        public LandingPage(string fName, string u)
         {
             InitializeComponent();
             SetValue(NavigationPage.HasNavigationBarProperty, false);
-            l.Text = "Welcome <" + u + ">!";
+            l.Text = "Welcome " + fName + "!";
             username = u;
         }
 

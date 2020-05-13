@@ -12,9 +12,11 @@ namespace cougar_reporter.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ViewTickets : TabbedPage
     {
+        public static string username;
         public ViewTickets(string u)
         {
             InitializeComponent();
+            username = u;
         }
     }
 }

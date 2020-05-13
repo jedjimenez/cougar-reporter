@@ -53,7 +53,7 @@ namespace cougar_reporter.Views
                 {
                     string name = type.Items[type.SelectedIndex];
 
-                    var user = await FirebaseHelper.AddUser(username.Text, pswd.Text, name, id.Text);
+                    var user = await FirebaseHelper.AddUser(fName.Text, lName.Text, username.Text, pswd.Text, name, id.Text);
 
                     if (user)
                     {
