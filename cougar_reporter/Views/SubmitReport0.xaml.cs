@@ -164,8 +164,13 @@ namespace cougar_reporter.Views
             string repair = RepairPicker.Items[RepairPicker.SelectedIndex];
             string build = BuildingPicker.Items[BuildingPicker.SelectedIndex];
 
-            await FirebaseHelper.AddInfo(username, repair, build, RoomNumber.Text, UserText.Text);
             
+            await FirebaseHelper.AddInfo(username, repair, build, RoomNumber.Text, UserText.Text);
+            await this.DisplayAlert(" ", "You have sucessfully submitted a report!", "Ok");
+
+
+
+
         }
     }
 }
