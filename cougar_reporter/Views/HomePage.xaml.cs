@@ -13,6 +13,7 @@ namespace cougar_reporter.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : ContentPage
     {
+        
         public HomePage(string u)
         {
             InitializeComponent();
