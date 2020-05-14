@@ -25,23 +25,16 @@ namespace cougar_reporter.Views
 
             if (count == 0)
             {
-                building.Text = "Academic Hall";
-                room.Text = "206";
-                date.Text = "5/14/2020";
-                description.Text = "broken window";
-                repairType.Text = "Damage";
-                count++;
-            }
-
-            else
-            {
+             
                 building.Text = "Science Hall II";
                 room.Text = "420";
-                date.Text = "4/20/20";
+                date.Text = "4/20/2020";
                 description.Text = "broken keyboard";
                 repairType.Text = "Damage";
-                count++;
+                
             }
+
+         
         }
         private void Next(object sender, EventArgs e)
         {
@@ -52,20 +45,10 @@ namespace cougar_reporter.Views
                 building.Text = "Science Hall II";
                 room.Text = "235";
                 date.Text = "5/14/2020";
-                description.Text = "broken chair";
-                repairType.Text = "Damage";
-                count++;
+                description.Text = "broken screen projector";
+                repairType.Text = "Equipment";   
             }
-
-            else
-            {
-                building.Text = "University Hall";
-                room.Text = "311";
-                date.Text = "5/14/2020";
-                description.Text = "broken desk";
-                repairType.Text = "Damage";
-                count++;
-            }
+         
         }
     }
 }
