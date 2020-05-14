@@ -76,12 +76,13 @@ namespace cougar_reporter.Models
                 return null;
             }
         }
+
         public static async Task<Ticket> GetRepair(string username)
         {
             try
             {
                 var allRepair = await GetUser(username);
-                return allRepair.Child("Users").Child(RepairType, Building, RoomNum, Description)
+                return allRepair.Child("Users").Child(RepairType, Building, RoomNum, Description);
             }
             catch (Exception e)
             {
