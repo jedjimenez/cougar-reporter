@@ -161,10 +161,10 @@ namespace cougar_reporter.Views
 
         private async void SubmitButton_Clicked(object sender, EventArgs e)
         {
-            //string repair = RepairPicker.Items[RepairPicker.SelectedIndex];
-            //string build = BuildingPicker.Items[BuildingPicker.SelectedIndex];
-            string repair = RepairText.Text;
-            string build = BuildingText.Text;
+            string repair = RepairPicker.Items[RepairPicker.SelectedIndex];
+            string build = BuildingPicker.Items[BuildingPicker.SelectedIndex];
+            //string repair = RepairText.Text;
+            //string build = BuildingText.Text;
 
             if (RepairText.Text == "<RepairType>" || BuildingText.Text == "<Building>" ||
                 RoomText.Text == "<Room>" || RoomText.Text == " " || Description.Text == "...")
@@ -174,7 +174,7 @@ namespace cougar_reporter.Views
             }
 
             
-            await FirebaseHelper.AddInfo(username, repair, build, RoomNumber.Text, UserText.Text);
+            await FirebaseHelper.AddInfo(repair, build, RoomNumber.Text, UserText.Text);
             await this.DisplayAlert(" ", "You have sucessfully submitted a report!", "Ok");
         }
     }
