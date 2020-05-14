@@ -27,7 +27,8 @@ namespace cougar_reporter.Models
                     lastName = item.Object.lastName,
                     UserName = item.Object.UserName,
                     Password = item.Object.Password,
-                    AccountType = item.Object.AccountType
+                    AccountType = item.Object.AccountType,
+                    UserId = item.Object.UserId
                 }).ToList();
                 return userlist;
             }
@@ -76,12 +77,17 @@ namespace cougar_reporter.Models
                 return null;
             }
         }
-        public static async Task<Ticket> GetRepair(string username)
+
+        //retrieve data with id
+        public static async Task<RegisteredUsers> GetUser1(string id)
         {
             try
             {
-                var allRepair = await GetUser(username);
-                return allRepair.Child("Users").Child(RepairType, Building, RoomNum, Description)
+                var allUsers = await GetAllUser();
+                await firebase
+                .Child("Users")
+                .OnceAsync<RegisteredUsers>();
+                return allUsers.Where(a => a.UserId == id).FirstOrDefault();
             }
             catch (Exception e)
             {
@@ -89,6 +95,7 @@ namespace cougar_reporter.Models
                 return null;
             }
         }
+
         //add user information to the database  
         public static async Task<bool> AddUser(string fName, string lName, string username, string password, string type, string id)
         {
