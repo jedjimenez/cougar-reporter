@@ -106,7 +106,7 @@ namespace cougar_reporter.Models
         }
 
         //add Ticket Information to the database
-        public static async Task AddInfo(string u, string repair, string build, string roomNum, string desc)
+        public static async Task AddInfo(string repair, string build, string roomNum, string desc)
         {
             try
             {
