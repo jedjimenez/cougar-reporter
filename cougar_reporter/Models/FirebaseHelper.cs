@@ -78,6 +78,7 @@ namespace cougar_reporter.Models
             }
         }
 
+
         //retrieve data with id
         public static async Task<RegisteredUsers> GetUser1(string id)
         {
