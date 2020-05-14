@@ -161,10 +161,10 @@ namespace cougar_reporter.Views
 
         private async void SubmitButton_Clicked(object sender, EventArgs e)
         {
-            string repair = RepairPicker.Items[RepairPicker.SelectedIndex];
-            string build = BuildingPicker.Items[BuildingPicker.SelectedIndex];
-            //string repair = RepairText.Text;
-            //string build = BuildingText.Text;
+            //string repair = RepairPicker.Items[RepairPicker.SelectedIndex];
+            //string build = BuildingPicker.Items[BuildingPicker.SelectedIndex];
+            string repair = RepairText.Text;
+            string build = BuildingText.Text;
 
             if (RepairText.Text == "<RepairType>" || BuildingText.Text == "<Building>" ||
                 RoomText.Text == "<Room>" || RoomText.Text == " " || Description.Text == "...")
