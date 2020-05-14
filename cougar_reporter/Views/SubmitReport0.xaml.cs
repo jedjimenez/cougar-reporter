@@ -173,14 +173,6 @@ namespace cougar_reporter.Views
                 await this.DisplayAlert(" ", "Incomplete submission :(", "Ok");
                 return;
             }
-
-            if (RepairText.Text == "<RepairType>" || BuildingText.Text == "<Building>" ||
-                RoomText.Text == "<Room>" || RoomText.Text == " " || Description.Text == "...")
-            {
-                await this.DisplayAlert(" ", "Incomplete submission :(", "Ok");
-                return;
-            }
-
             
             await FirebaseHelper.AddInfo(username, repair, build, RoomNumber.Text, UserText.Text);
             await this.DisplayAlert(" ", "You have sucessfully submitted a report!", "Ok");
