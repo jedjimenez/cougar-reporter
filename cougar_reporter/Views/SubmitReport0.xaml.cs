@@ -166,6 +166,14 @@ namespace cougar_reporter.Views
             string repair = RepairText.Text;
             string build = BuildingText.Text;
 
+
+            if (RepairText.Text == "<RepairType>" || BuildingText.Text == "<Building>" ||
+                RoomText.Text == "<Room>" || RoomText.Text == " " || Description.Text == "...")
+            {
+                await this.DisplayAlert(" ", "Incomplete submission :(", "Ok");
+                return;
+            }
+
             if (RepairText.Text == "<RepairType>" || BuildingText.Text == "<Building>" ||
                 RoomText.Text == "<Room>" || RoomText.Text == " " || Description.Text == "...")
             {
