@@ -41,7 +41,7 @@
                    Margin="5, 5, 5, 5">
             </Entry>
             <Editor x:Name ="UserText" 
-                    Placeholder="Add more details here (500 character limit)"
+                    Placeholder="Add more details here"
                     MaxLength="500"
                     AutoSize="TextChanges"
                     TextChanged="UserText_TextChanged"
@@ -103,42 +103,44 @@
     </ContentPage>
 
     <ContentPage Title="Review">
-        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <ScrollView>
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
 
-            <Entry x:Name="RepairText"
+                <Entry x:Name="RepairText"
                    TextColor="#1592E6" 
                    FontSize="25" 
                    HorizontalTextAlignment="Center"
                    Margin="5, 5, 5, 5"
                    IsReadOnly="True"/>
 
-            <Entry x:Name="BuildingText"
+                <Entry x:Name="BuildingText"
                    TextColor="#1592E6" 
                    FontSize="25" 
                    HorizontalTextAlignment="Center"
                    Margin="5, 5, 5, 5"
                    IsReadOnly="True"/>
 
-            <Entry x:Name="RoomText"
+                <Entry x:Name="RoomText"
                    TextColor="#1592E6" 
                    FontSize="25" 
                    HorizontalTextAlignment="Center"
                    Margin="5, 5, 5, 5"
                    IsReadOnly="True"/>
 
-            <Editor x:Name="Description"
+                <Editor x:Name="Description"
                     AutoSize="TextChanges"
                     TextColor="Blue" 
                     FontSize="Large"
                     Margin="5, 5, 5, 5"
                     IsReadOnly="True" />
 
-            <Image x:Name="Photo" Source="cougar.jpg"/>
+                <Image x:Name="Photo" Source="cougar.jpg"/>
 
-            <Button x:Name="SubmitButton"
+                <Button x:Name="SubmitButton"
                     Text="Submit"
                     Clicked="SubmitButton_Clicked"/>
 
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage>
 </TabbedPage>
