@@ -10,24 +10,36 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
             <StackLayout Orientation="Horizontal" HorizontalOptions= "Center" >
-                <Label Text="Building:" TextColor="#1592E6" FontSize="18" ></Label>
-                <Label Text="(Building)" TextColor="#1592E6" FontSize="18" ></Label>
-                <Label Text="Room:" TextColor="#1592E6" FontSize="18"></Label>
-                <Label Text="(Room)" TextColor="#1592E6" FontSize="18" ></Label>
-                <Label Text="Date:" TextColor="#1592E6" FontSize="18"></Label>
-                <Label Text="(Date)" TextColor="#1592E6" FontSize="18" ></Label>
             </StackLayout>
             <Image Source="cougar.jpeg"/>
-            <Label Text="Building:" TextColor="#1592E6" FontSize="18" ></Label>
-            <Label x:Name="building" Text="(Building)" TextColor = "#1592E6" FontSize="18"></Label>
-            <Label Text="Room:" TextColor="#1592E6" FontSize="18" ></Label>
-            <Label x:Name="room" Text="(Room)" TextColor="#1592E6" FontSize="18" ></Label>
-            <Label Text="Date:" TextColor="#1592E6" FontSize="18" ></Label>
-            <Label x:Name="date" Text="(Date)" TextColor="#1592E6" FontSize="18" ></Label>
+            <StackLayout Padding="15,10,15,10" Orientation="Horizontal" HorizontalOptions= "StartAndExpand" >
+                <Label Text="Building:"  HorizontalOptions="Start" TextColor="#1592E6" FontSize = "20" ></Label>
+                <Label x:Name="building" Text="Science Hall II" HorizontalOptions="End" TextColor="#1592E6" FontSize = "20" ></Label>
+            </StackLayout>
+
+            <StackLayout Padding="15,10,15,10" Orientation="Horizontal" HorizontalOptions= "StartAndExpand" >
+                <Label Text="Room:" HorizontalOptions="Start" TextColor="#1592E6" FontSize = "20" ></Label>
+                <Label x:Name="room" Text="420" HorizontalOptions="End" TextColor="#1592E6" FontSize = "20" ></Label>
+            </StackLayout>
+
+            <StackLayout Padding="15,10,15,10" Orientation="Horizontal" HorizontalOptions= "StartAndExpand" >
+                <Label Text="Date:" HorizontalOptions="Start" TextColor="#1592E6" FontSize = "20" ></Label>
+                <Label x:Name="date" Text="4/20/2020" HorizontalOptions="End" TextColor="#1592E6" FontSize = "20" ></Label>
+            </StackLayout>
+
+            <StackLayout Padding="15,10,15,10" Orientation="Horizontal" HorizontalOptions= "StartAndExpand" >
+                <Label Text="Description:" HorizontalOptions="Start" TextColor="#1592E6" FontSize = "20" ></Label>
+                <Label x:Name="description" Text="broken projector" HorizontalOptions="End" TextColor="#1592E6" FontSize = "20" ></Label>
+            </StackLayout>
+
+            <StackLayout Padding="15,10,15,10" Orientation="Horizontal" HorizontalOptions= "StartAndExpand" >
+                <Label Text="Repair Type:" HorizontalOptions="Start" TextColor="#1592E6" FontSize = "20" ></Label>
+                <Label x:Name="repairType" Text="Equipment"  HorizontalOptions="End" TextColor="#1592E6" FontSize = "20" ></Label>
+            </StackLayout>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Button Text ="previous" TextColor ="Black" BackgroundColor="#1592E6" Font="Poppins" Margin="50" ></Button>
-                <Button Text ="next" TextColor ="Black" BackgroundColor ="#1592E6" Font="Poppins" Margin="50"  ></Button>
+                <Button Text ="previous" TextColor ="Black" BackgroundColor="#1592E6" Font="Poppins" Margin="50" Clicked="Previous" ></Button>
+                <Button Text ="next" TextColor ="Black" BackgroundColor ="#1592E6" Font="Poppins" Margin="50" Clicked="Next"  ></Button>
             </StackLayout>
 
         </StackLayout>

@@ -33,7 +33,7 @@ namespace cougar_reporter
                 if (user != null)
                     if (username.Text == user.UserName && password.Text == user.Password)
                     {
-                        await App.Current.MainPage.DisplayAlert(" ", "Successfully Logged In", "Ok");
+                        await App.Current.MainPage.DisplayAlert(" ", "Successfully Logged In!", "Ok");
                         //App.Current.MainPage = new NavigationPage(new LandingPage(user.firstName, user.UserName));
                         App.Current.MainPage = new NavigationPage(new Hamburger(user.UserName));
                     }
