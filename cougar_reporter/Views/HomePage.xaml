@@ -24,7 +24,11 @@
             <Label x:Name="room" Text="(Room)" TextColor="#1592E6" FontSize="18" ></Label>
             <Label Text="Date:" TextColor="#1592E6" FontSize="18" ></Label>
             <Label x:Name="date" Text="(Date)" TextColor="#1592E6" FontSize="18" ></Label>
-
+            <Label Text ="Description:" TextColor="#1592E6" FontSize="18" ></Label>
+            <Label x:Name="description" Text="(Description)" TextColor="#1592E6" FontSize="18" ></Label>
+            <Label Text="Repair Type: " TextColor="#1592E6" FontSize="18" ></Label>
+            <Label x:Name="repairType" Text="(Description)" TextColor="#1592E6" FontSize="18" ></Label>
+            
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 <Button Text ="previous" TextColor ="Black" BackgroundColor="#1592E6" Font="Poppins" Margin="50" ></Button>
                 <Button Text ="next" TextColor ="Black" BackgroundColor ="#1592E6" Font="Poppins" Margin="50"  ></Button>
