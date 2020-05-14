@@ -12,11 +12,7 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions= "Center" >
             </StackLayout>
             <Image Source="cougar.jpeg"/>
-<<<<<<< HEAD
-            
-=======
-          
->>>>>>> 0c3fd398a7e8b495323c8c77928b00b4a0e21522
+
             <StackLayout Padding="15,10,15,10" Orientation="Horizontal" HorizontalOptions= "StartAndExpand" >
                 <Label Text="Building:"  HorizontalOptions="Start" TextColor="#1592E6" FontSize = "20" ></Label>
                 <Label x:Name="building" Text="Science Hall II" HorizontalOptions="End" TextColor="#1592E6" FontSize = "20" ></Label>
