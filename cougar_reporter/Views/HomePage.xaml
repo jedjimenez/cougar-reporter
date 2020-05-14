@@ -12,6 +12,7 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions= "Center" >
             </StackLayout>
             <Image Source="cougar.jpeg"/>
+            
             <StackLayout Padding="15,10,15,10" Orientation="Horizontal" HorizontalOptions= "StartAndExpand" >
                 <Label Text="Building:"  HorizontalOptions="Start" TextColor="#1592E6" FontSize = "20" ></Label>
                 <Label x:Name="building" Text="Science Hall II" HorizontalOptions="End" TextColor="#1592E6" FontSize = "20" ></Label>
@@ -29,12 +30,12 @@
 
             <StackLayout Padding="15,10,15,10" Orientation="Horizontal" HorizontalOptions= "StartAndExpand" >
                 <Label Text="Description:" HorizontalOptions="Start" TextColor="#1592E6" FontSize = "20" ></Label>
-                <Label x:Name="description" Text="broken projector" HorizontalOptions="End" TextColor="#1592E6" FontSize = "20" ></Label>
+                <Label x:Name="description" Text="broken keyboard" HorizontalOptions="End" TextColor="#1592E6" FontSize = "20" ></Label>
             </StackLayout>
 
             <StackLayout Padding="15,10,15,10" Orientation="Horizontal" HorizontalOptions= "StartAndExpand" >
                 <Label Text="Repair Type:" HorizontalOptions="Start" TextColor="#1592E6" FontSize = "20" ></Label>
-                <Label x:Name="repairType" Text="Equipment"  HorizontalOptions="End" TextColor="#1592E6" FontSize = "20" ></Label>
+                <Label x:Name="repairType" Text="Damage"  HorizontalOptions="End" TextColor="#1592E6" FontSize = "20" ></Label>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
